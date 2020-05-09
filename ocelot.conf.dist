@@ -1,7 +1,9 @@
+
 # Ocelot config file
 # Lines starting with a # are ignored
 # A # anywhere else is treated like any other character
 
+site_service        = localhost:2710
 listen_port         = 34000
 max_connections     = 128
 max_middlemen       = 20000
@@ -15,14 +17,14 @@ max_request_size    = 4096
 numwant_limit       = 50
 request_log_size    = 500
 
-mysql_host          = 
-mysql_username      = 
-mysql_password      = 
-mysql_db            = 
+mysql_host          = mysql
+mysql_username      = gazelle
+mysql_password      = password
+mysql_db            = gazelle
 
 # The passwords must be 32 characters and match the Gazelle config
-report_password     = 00000000000000000000000000000000
-site_password       = 00000000000000000000000000000000
+report_password     = u7D7pw5UVxXuax6Pr34FwqnOA80pZ7S8
+site_password       = YShGZfS8PS6ucIE6YXc7Jo9dyzWbyvBa
 
 peers_timeout       = 7200
 del_reason_lifetime = 86400

@@ -14,6 +14,9 @@ RUN apt-get update \
         libjemalloc-dev \
         libmysql++-dev \
         pkg-config \
+	mariadb-client \
+	cron \
+	procps \
     && mkdir build \
     && cd build \
     && cmake .. \
@@ -28,4 +31,7 @@ RUN apt-get update \
     && mv /srv/build/ocelot /srv/ocelot \
     && mv /srv/ocelot.conf.dist /srv/ocelot.conf
 
-CMD ["/srv/ocelot"]
+EXPOSE 34000/tcp
+
+ADD start_ocelot.sh /srv/start_ocelot.sh
+CMD ["/bin/bash", "/srv/start_ocelot.sh"]
