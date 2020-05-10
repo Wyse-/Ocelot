@@ -25,6 +25,6 @@ run_service cron
 crontab /srv/crontab
 
 # Start Ocelot
-echo "Start Ocelot..."
+echo "Starting ocelot..."
 ./ocelot
 tail -f /tmp/ocelot.log
