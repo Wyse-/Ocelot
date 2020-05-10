@@ -10,7 +10,6 @@ autom4te.cache/
 Makefile
 .deps/
 src/ocelot
-/ocelot.conf
 build/
 /ocelot
 CMakeFiles/
